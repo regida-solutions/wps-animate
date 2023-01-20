@@ -1,0 +1,69 @@
+{
+  "name": "wps-animate",
+  "version": "1.0.0",
+  "description": "Add CSS animations to your content",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/regida-solutions/wps-animate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/regida-solutions/wps-animate/issues"
+  },
+  "homepage": "https://github.com/regida-solutions/wps-animate#readme",
+  "engines": {
+    "node": "18",
+    "npm": ">=8",
+    "yarn": "Please use npm"
+  },
+  "devDependencies": {
+    "@dekode/stylelint-config": "1.0.2",
+    "@wordpress/eslint-plugin": "12.3.0",
+    "@wordpress/scripts": "^23.1.0",
+    "autoprefixer": "10.4.2",
+    "browser-sync": "^2.27.10",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "components": "file:packages/components",
+    "cssnano": "5.1.8",
+    "dotenv": "16.0.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "fast-glob": "3.2.11",
+    "husky": "7.0.4",
+    "ignore-emit-webpack-plugin": "2.0.6",
+    "lint-staged": "12.2.0",
+    "postcss": "8.4.14",
+    "postcss-custom-media": "8.0.0",
+    "postcss-flexbugs-fixes": "5.0.2",
+    "postcss-import": "14.1.0",
+    "postcss-media-minmax": "5.0.0",
+    "postcss-mixins": "9.0.2",
+    "postcss-nested": "5.0.6",
+    "prettier": "2.6.2",
+    "resolve-url-loader": "5.0.0",
+    "webpack-remove-empty-scripts": "0.8.0"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "start": "wp-scripts start",
+    "build": "wp-scripts build",
+    "format": "wp-scripts format .",
+    "check-engines": "wp-scripts check-engines",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.css": [
+      "wp-scripts lint-style"
+    ],
+    "*.{js,ts,tsx}": [
+      "prettier --write",
+      "wp-scripts lint-js"
+    ]
+  },
+  "dependencies": {
+    "scrollreveal": "^4.0.9"
+  }
+}
