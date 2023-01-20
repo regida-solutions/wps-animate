@@ -6,7 +6,7 @@
  * Author:          WPShapers
  * Author URI:      https://wpshapers.com
  * Text Domain:     wps-animate
- * Version:         1.0.0
+ * Version:         1.0.1
  *
  * @package WPS_Animate
  */
@@ -15,7 +15,7 @@ declare( strict_types=1 );
 
 namespace WPS\Animate;
 
-define( 'WPS_ANIMATE_VERSION', '1.0.0' );
+define( 'WPS_ANIMATE_VERSION', '1.0.1' );
 define( 'WPS_ANIMATE_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'WPS_ANIMATE_DIR_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'WPS_ANIMATE_UPDATE_URL', 'https://zsoltrevay.com/packages' );
